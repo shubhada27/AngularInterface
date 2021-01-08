@@ -1,0 +1,14 @@
+<p>home works!</p>
+
+
+<div>
+	<table>
+		<tr *ngFor = "let products of productlist">
+			<td>{{products.name}}</td>
+			<td>{{products.color}}</td>
+			<td><img [src] = products.image1 ></td> 
+			<td><button (click)="onClick(products.id)">View details</button></td>
+			<td><a [routerLink] = "['/viewdetails',products.id]">View </a></td>
+		</tr>
+	</table>
+</div>
